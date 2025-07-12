@@ -1,0 +1,93 @@
+/* Кастомные цвета и шрифты */
+:root {
+    --brown: #8B4513;
+    --light-brown: #d2b48c;
+    --gold: #FFD700;
+}
+
+/* Подключаем китайские шрифты */
+@font-face {
+    font-family: 'ChineseFont';
+    src: url('fonts/ZCOOLQingKeHuangYou-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChineseTitle';
+    src: url('fonts/MaShanZheng-Regular.ttf') format('truetype');
+}
+
+.text-brown {
+    color: var(--brown);
+}
+
+.bg-brown {
+    background-color: var(--brown);
+}
+
+/* Логотип */
+.logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('../pictures/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 2px var(--gold));
+}
+
+.site-title {
+    font-family: 'ChineseTitle', cursive;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.monkey-image {
+    width: 100%;
+    height: 300px;
+    background-image: url('../pictures/image.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: 3px solid var(--brown);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.monkey-image:hover {
+    transform: scale(1.03);
+}
+
+/* Типографика */
+body {
+    font-family: 'ChineseFont', 'Arial', sans-serif;
+    line-height: 1.7;
+}
+
+.section-title {
+    font-family: 'ChineseTitle', cursive;
+    letter-spacing: 2px;
+}
+
+.content-box {
+    border-left: 4px solid var(--brown);
+}
+
+.signature {
+    font-family: 'ChineseTitle', cursive;
+    font-size: 1.8rem;
+}
+
+/* Адаптивные правки */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.2rem;
+    }
+    
+    .monkey-image {
+        height: 250px;
+    }
+    
+    .site-title {
+        font-size: 1.5rem;
+    }
+}
